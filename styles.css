@@ -1,10 +1,18 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color:crimson;
+    color: white;
 }
 
 header {
     margin-block-start: 1.5rem;
+}
+
+
+.wrapper {
+    inline-size: 20rem;
+    margin: 0 auto;
 }
 
 .hero {
@@ -14,26 +22,69 @@ header {
     text-align: center;
 }
 
-.gap {
-    inline-size: 20rem ;
-    margin: 0 auto;
-}
-
-
 
 .post-container h3 {
     text-align: center;
+    font-size: 1.2rem;
+    margin-inline: 1.5rem;
 }
 
 
 .grid-post-container {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
 }
 
 
 
 footer p {
     text-align: center;
+}
+
+@media (min-width: 760px) {
+    
+    
+
+    .wrapper {
+        min-inline-size: 44rem;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 17.5rem  1fr ;
+        column-gap: 1.5rem;
+    }
+
+    .hero .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        text-align: start
+    }
+
+    .post-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .grid-post-container {
+        display: grid;
+        max-inline-size: 44rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 13.5rem;
+        gap: 1.5rem;
+        grid-auto-flow: row dense;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .medium-height{
+        grid-row-end: span 2;
+    }
+
+    .small-height {
+        grid-row-end: span 1;
+    }
+    
+
 }
